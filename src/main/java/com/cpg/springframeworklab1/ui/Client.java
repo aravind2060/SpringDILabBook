@@ -14,12 +14,7 @@ public class Client {
 		
 		EmployeeDTO emp=apc.getBean("aravindEmployeeObject", EmployeeDTO.class);
 		
-		System.out.println("Employee ID:"+emp.getEmployeeId());
-		System.out.println("Employee Name:"+emp.getEmployeeName());
-		System.out.println("Employee Salary:"+emp.getSalary());
-		System.out.println("Employee BU:"+emp.getBusinessUnit());
-		System.out.println("Employee Age:"+emp.getAge());
-		
+	    emp.getSBUDetails();
 		((ClassPathXmlApplicationContext)apc).close();
 		
 	}

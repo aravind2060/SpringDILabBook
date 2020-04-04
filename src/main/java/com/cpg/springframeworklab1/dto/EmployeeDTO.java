@@ -5,8 +5,9 @@ public class EmployeeDTO {
     private int employeeId;
     private String employeeName;
     private double salary;
-    private String businessUnit;
+    private SBU businessUnit;
     private int age;
+    
 	public int getEmployeeId() {
 		return employeeId;
 	}
@@ -25,17 +26,24 @@ public class EmployeeDTO {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	public String getBusinessUnit() {
-		return businessUnit;
-	}
-	public void setBusinessUnit(String businessUnit) {
-		this.businessUnit = businessUnit;
-	}
 	public int getAge() {
 		return age;
 	}
 	public void setAge(int age) {
 		this.age = age;
 	}
+	public void setBusinessUnit(SBU businessUnit) {
+		this.businessUnit = businessUnit;
+	}
+	public SBU getBusinessUnit() {
+		return businessUnit;
+	}
+	
+	public void getSBUDetails()
+	{
+		System.out.println("EmployeeDTO [employeeId=" + employeeId + ", employeeName=" + employeeName + ", salary=" + salary
+				+ ", businessUnit=" + businessUnit + ", age=" + age + "]");
+	}
+	
     
 }

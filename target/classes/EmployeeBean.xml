@@ -10,7 +10,13 @@
    <property name="employeeId" value="101"/>
    <property name="employeeName" value="aravind"/>
    <property name="salary" value="30000"/>
-   <property name="businessUnit" value="Testing"/>
+   <property name="businessUnit" >
+      <bean class="com.cpg.springframeworklab1.dto.SBU">
+         <property name="sbuId" value="515671" />
+         <property name="sbuName" value="Aravinda Reddy" />
+         <property name="sbuHead" value="Product Developer"/>
+      </bean>
+   </property>
    <property name="age" value="21"/>
 </bean>
 

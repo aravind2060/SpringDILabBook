@@ -6,18 +6,31 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 		
 		
-<bean  id="aravindEmployeeObject" class="com.cpg.springframeworklab1.dto.EmployeeDTO">
-   <property name="employeeId" value="101"/>
+
+   
+   <bean id="aravindSBUObject" class="com.cpg.springframeworklab1.dto.SBU">
+        <property name="sbuId" value="515671"/>
+        <property name="sbuName" value="Dmm"/>
+        <property name="sbuHead" value="aravind reddy"/>
+        <property name="empList">
+           <list>
+             <ref bean="Emp1"/>
+             <ref bean="Emp2"/>
+            </list>
+        </property>
+   </bean>
+   
+    <bean id="Emp1" class="com.cpg.springframeworklab1.dto.EmployeeDTO">
+         <property name="employeeId" value="101"/>
    <property name="employeeName" value="aravind"/>
    <property name="salary" value="30000"/>
-   <property name="businessUnit" >
-      <bean class="com.cpg.springframeworklab1.dto.SBU">
-         <property name="sbuId" value="515671" />
-         <property name="sbuName" value="Aravinda Reddy" />
-         <property name="sbuHead" value="Product Developer"/>
-      </bean>
-   </property>
    <property name="age" value="21"/>
-</bean>
-
+    </bean>
+    
+    <bean id="Emp2" class="com.cpg.springframeworklab1.dto.EmployeeDTO">
+         <property name="employeeId" value="102"/>
+   <property name="employeeName" value="aravind"/>
+   <property name="salary" value="30000"/>
+   <property name="age" value="21"/>
+    </bean>
 </beans>
